@@ -16,7 +16,7 @@ htime is available on [Maven central](http://search.maven.org/#search%7Cga%7C1%7
     <dependency>
         <groupId>com.cronutils</groupId>
         <artifactId>htime</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.0-SNAPSHOT</version>
     </dependency>
 
 
