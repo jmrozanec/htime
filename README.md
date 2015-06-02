@@ -6,7 +6,6 @@ The project follows the [Semantic Versioning Convention](http://semver.org/) and
 
 [![Flattr this!](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=jmrozanec&url=https://github.com/jmrozanec/htime)
 [![Build Status](https://travis-ci.org/jmrozanec/htime.png?branch=master)](https://travis-ci.org/jmrozanec/htime)
-[![Coverage Status](https://coveralls.io/repos/jmrozanec/htime/badge.png)](https://coveralls.io/r/jmrozanec/htime)
 
 [![Project stats by OpenHub](https://www.openhub.net/p/htime/widgets/project_thin_badge.gif)](https://www.openhub.net/p/htime/)
 
@@ -30,7 +29,8 @@ htime is available on [Maven central](http://search.maven.org/#search%7Cga%7C1%7
 ***Get JodaTime DateTimeFormatter***
 
     //define your own expressions to be formatted
-    HDateTimeFormat hDateTimeFormat = HDateTimeFormatBuilder.getInstance().forJodaTime().getFormatter();;
+    HDateTimeFormat hDateTimeFormat =
+            HDateTimeFormatBuilder.getInstance().forJodaTime().getFormatter();
     DateTimeFormatter jodaTimeFormatter = hDateTimeFormat.forPattern("June 9, 2011");
     String formattedDate = jodaTimeFormatter.print(DateTime.now());
     //formattedDate will be ex.: "June 9, 2015"
