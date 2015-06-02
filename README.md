@@ -26,6 +26,15 @@ htime is available on [Maven central](http://search.maven.org/#search%7Cga%7C1%7
 
 **Usage Examples**
 
+***Get JDK SimpleDateFormatter***
+
+    //define your own expressions to be formatted
+    HDateTimeFormat hDateTimeFormat =
+            HDateTimeFormatBuilder.getInstance().forJDK12().getFormatter();
+    SimpleDateFormat jdkTimeFormatter = hDateTimeFormat.forPattern("June 9, 2011");
+    String formattedDate = jdkTimeFormatter.format(new Date());
+    //formattedDate will be ex.: "June 9, 2015"
+
 ***Get JodaTime DateTimeFormatter***
 
     //define your own expressions to be formatted
