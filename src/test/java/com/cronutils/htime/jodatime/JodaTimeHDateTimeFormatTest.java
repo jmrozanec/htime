@@ -8,7 +8,8 @@ import org.joda.time.format.DateTimeFormatter;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 /*
  * Copyright 2015 jmrozanec
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,7 +26,7 @@ public class JodaTimeHDateTimeFormatTest {
     private HDateTimeFormat<DateTimeFormatter> formatter;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         formatter = HDateTimeFormatBuilder.getInstance().forJodaTime().getFormatter();
     }
 
@@ -43,7 +44,7 @@ public class JodaTimeHDateTimeFormatTest {
         assertForPattern("HH:mm Z", "01:00 America/Los_Angeles");
     }
 
-    private void assertForPattern(String dateTimePattern, String readablePattern){
+    private void assertForPattern(String dateTimePattern, String readablePattern) {
         DateTime now = DateTime.now();
         assertEquals(
                 DateTimeFormat.forPattern(dateTimePattern).print(now),

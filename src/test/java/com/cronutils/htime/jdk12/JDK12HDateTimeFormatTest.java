@@ -3,22 +3,18 @@ package com.cronutils.htime.jdk12;
 import com.cronutils.htime.HDateTimeFormat;
 import com.cronutils.htime.HDateTimeFormatBuilder;
 import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 import org.junit.Before;
-import org.junit.Test;
 
 import java.text.SimpleDateFormat;
-import java.util.Locale;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-class Jdk12HDateTimeFormatTest {
+public class JDK12HDateTimeFormatTest {
     private HDateTimeFormat<SimpleDateFormat> formatter;
 
     @Before
-    public void setUp(){
-        formatter = new Jdk12HDateTimeFormat(Locale.US);
+    public void setUp() {
+        formatter = HDateTimeFormatBuilder.getInstance().forJDK12().getFormatter();
     }
 
 
@@ -35,7 +31,7 @@ class Jdk12HDateTimeFormatTest {
         assertForPattern("HH:mm Z", "01:00 America/Los_Angeles");
     }
 
-    private void assertForPattern(String dateTimePattern, String readablePattern){
+    private void assertForPattern(String dateTimePattern, String readablePattern) {
         DateTime now = DateTime.now();
         System.out.println(String.format("%s :: %s", dateTimePattern, readablePattern));
         assertEquals(

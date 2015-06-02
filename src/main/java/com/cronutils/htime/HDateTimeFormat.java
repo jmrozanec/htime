@@ -15,6 +15,7 @@ package com.cronutils.htime;
 public interface HDateTimeFormat<T> {
     /**
      * Creates a date time formatter for given expression
+     *
      * @param expression - some expression, never null
      * @return some formatter instance, never null
      */

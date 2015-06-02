@@ -1,8 +1,10 @@
 package com.cronutils.htime;
 
+import com.cronutils.htime.jdk12.JDK12HDateTimeFormat;
 import com.cronutils.htime.jodatime.JodaTimeHDateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 /*
@@ -20,23 +22,38 @@ import java.util.Locale;
 public class HDateTimeFormatBuilder {
     private static final HDateTimeFormatBuilder instance = new HDateTimeFormatBuilder();
 
-    private HDateTimeFormatBuilder(){}
+    private HDateTimeFormatBuilder() {
+    }
 
-    public static HDateTimeFormatBuilder getInstance(){
+    public static HDateTimeFormatBuilder getInstance() {
         return instance;
     }
 
-    public JodaTimeHDateTimeFormatBuilder forJodaTime(){
+    public JodaTimeHDateTimeFormatBuilder forJodaTime() {
         return new JodaTimeHDateTimeFormatBuilder();
     }
 
+    public JDK12TimeHDateTimeFormatBuilder forJDK12() {
+        return new JDK12TimeHDateTimeFormatBuilder();
+    }
+
     public static class JodaTimeHDateTimeFormatBuilder {
-        public HDateTimeFormat<DateTimeFormatter> getFormatter(){
+        public HDateTimeFormat<DateTimeFormatter> getFormatter() {
             return new JodaTimeHDateTimeFormat(Locale.US);
         }
 
-        public HDateTimeFormat<DateTimeFormatter> getFormatter(Locale locale){
+        public HDateTimeFormat<DateTimeFormatter> getFormatter(Locale locale) {
             return new JodaTimeHDateTimeFormat(locale);
+        }
+    }
+
+    public static class JDK12TimeHDateTimeFormatBuilder {
+        public HDateTimeFormat<SimpleDateFormat> getFormatter() {
+            return new JDK12HDateTimeFormat(Locale.US);
+        }
+
+        public HDateTimeFormat<SimpleDateFormat> getFormatter(Locale locale) {
+            return new JDK12HDateTimeFormat(locale);
         }
     }
 }
