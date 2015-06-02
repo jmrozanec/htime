@@ -19,7 +19,7 @@ import java.util.Locale;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class Jdk12HDateTimeFormat implements HDateTimeFormat<SimpleDateFormat>{
+class Jdk12HDateTimeFormat implements HDateTimeFormat<SimpleDateFormat>{
     private Locale locale;
 
     public Jdk12HDateTimeFormat(Locale locale){

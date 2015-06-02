@@ -13,7 +13,7 @@ import java.util.Locale;
 
 import static org.junit.Assert.*;
 
-public class Jdk12HDateTimeFormatTest {
+class Jdk12HDateTimeFormatTest {
     private HDateTimeFormat<SimpleDateFormat> formatter;
 
     @Before
@@ -21,7 +21,7 @@ public class Jdk12HDateTimeFormatTest {
         formatter = new Jdk12HDateTimeFormat(Locale.US);
     }
 
-    @Test
+
     public void testForPattern() throws Exception {
         assertForPattern("MMMM d, YYYY", "June 9, 2011");
         assertForPattern("MMM d, YYYY", "Jun 9, 2011");
