@@ -12,7 +12,7 @@
 
     <groupId>com.cronutils</groupId>
     <artifactId>htime</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>htime</name>
     <description>A Java library for human readable date and time formatters</description>
