@@ -1,6 +1,6 @@
 htime
 ===========
-A Java library to make it easy for humans format a date. You no longer need to remember date time formatting chars: just write an example, and you will get the appropiate formatter. 
+A Java library to make it easy for humans format a date. You no longer need to remember date time formatting chars: just write an example, and you will get the appropriate formatter. 
 
 The project follows the [Semantic Versioning Convention](http://semver.org/) and uses Apache 2.0 license.
 
@@ -22,7 +22,7 @@ htime is available on [Maven central](http://search.maven.org/#search%7Cga%7C1%7
 
 **Features**
 
- * Provide any date time format written in human readable text, and get the appropiate date time formatter!
+ * Provide any date time format written in human readable text, and get the appropriate date time formatter!
 
 **Usage Examples**
 
